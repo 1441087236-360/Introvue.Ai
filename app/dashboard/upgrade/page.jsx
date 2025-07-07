@@ -5,7 +5,7 @@ import PlanItemCard from './_components/PlanItemCard'
 
 function Upgrade() {
     return (
-        <div className='p-10'>
+        <div className='p-10 '>
             <h2 className='font-bold text-white text-3xl text-center'>Upgrade</h2>
             <h2 className='text-center  text-gray-500'>Upgrade to monthly plan to access unlimited mock interview</h2>
 

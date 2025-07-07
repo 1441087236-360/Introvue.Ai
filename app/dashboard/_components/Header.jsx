@@ -52,8 +52,17 @@ function Header() {
   return (
     <>
       {/* Sidebar for desktop and tablet */}
+      <style>{`
+        @media (min-width: 768px) {
+          .sidebar { width: 4.5rem; }
+        }
+        @media (min-width: 1024px) {
+          .sidebar { width: 16rem; max-width: 100vw; }
+        }
+      `}</style>
       <aside
         className={`
+          sidebar
           hidden
           md:flex
           flex-col
@@ -67,13 +76,11 @@ function Header() {
           z-50
           w-64
         `}
-        style={{
-          width: '16rem', // 256px for desktop
-          maxWidth: '100vw',
-        }}
+
+      
       >
         {/* Logo */}
-        <div className="flex items-center justify-left cursor-pointer pl-5 py-6 ">
+        <div className="hidden lg:flex items-center justify-left cursor-pointer pl-5 py-6 ">
           <Image src={'/logo.svg'} width={160} height={100} alt='logo' className="" />
           
         </div>
